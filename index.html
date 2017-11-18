@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>h5</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/awardRotate.js"></script>
+<script type="text/javascript" src="js/fontSize.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body style="background:#bb2e30;overflow-x:hidden;">
+<!--奖项图片-->
+    <img src="images/hb80.png" id="img-80" style="display:none;"/>
+    <img src="images/hb88.png" id="img-88" style="display:none;"/>
+    <img src="images/hblh.png" id="img-lh" style="display:none;"/>
+    <img src="images/hb600.png" id="img-600" style="display:none;"/>
+    <img src="images/hb888.png" id="img-888" style="display:none;"/>
+    <img src="images/hbsmile.png" id="img-smile" style="display:none;"/>
+	<div class="wrap">
+		<div class="rule_btn"></div>
+		<div class="banner">
+			<div class="header">
+
+			</div>
+			<div class="turnplate" style="background-image:url(images/turnplate-bg.png);background-size:100% 100%;">
+				<canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
+				<img class="pointer" src="images/turnplate-pointer.png"/>
+			</div>
+		</div>
+	</div>
+<!--规则-->
+<!--奖品弹出层-->
+	<div class="model">
+		<div class="wrap">
+			<div class="close"></div>
+			<div class="hb-template">
+				<div class="back"></div>
+				<div class="body">
+					<!--奖品图片-->
+					<img src="" alt="">
+				</div>
+				<div class="front">
+					<p class="p1">恭喜获得</p>
+					<p class="prize"></p>
+					<a href="#" class="btn">立即领取</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
