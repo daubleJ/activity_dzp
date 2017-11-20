@@ -34,14 +34,36 @@ a:hover{color:#c00; text-decoration:none;}
 }
 .model .close{
     position: absolute;
-    /*top:1.5rem;*/
+    top:-.5rem;
     right: .5rem;
     width:.5rem ;
     height: .5rem;
     background: url("../images/close.png") no-repeat;
     background-size: contain;
 }
-
+.model_prize .light{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 7.5rem;
+    height: 7.5rem;
+    background: url("../images/light.png") no-repeat top center;
+    background-size: contain;
+    animation: myRotate 6s linear infinite;
+}
+@keyframes myRotate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+.model_prize .wrap{
+    background:url("../images/redpacks.png") no-repeat ;
+    background-size: contain;
+}
 .model .hb-template{
     width: 6rem;
     height: 7rem;
@@ -134,10 +156,10 @@ a:hover{color:#c00; text-decoration:none;}
     overflow: hidden;
     width: 5.6rem;
     height: 6.6rem;
-    padding: .28rem .2rem;
-    -webkit-box-sizing: pdding-box;
-    -moz-box-sizing: pdding-box;
-    box-sizing: pdding-box;
+    padding: .2rem .2rem;
+    -webkit-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
+    box-sizing: padding-box;
     color: #fff;
 }
 @media screen and (min-width: 1025px){
@@ -172,7 +194,7 @@ a:hover{color:#c00; text-decoration:none;}
 }
 .scroll-box{
     width: 100%;
-    height: 5.24rem;
+    height: 5.5rem;
     overflow: auto;
 }
 .rule-modal .iScrollVerticalScrollbar {

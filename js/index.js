@@ -54,7 +54,16 @@ $(document).ready(function(){
                 $('.model_prize .close').click(function(){
                     $('.model_prize').hide();
                 });
-                $('.model_prize').fadeIn();
+                $('.model_prize').show();
+                var num = 0.1;
+                var timer = setInterval(function () {
+                    num+=0.01;
+                    if (num >= 1){
+                        clearInterval(timer);
+                        $('.model_prize .light').show();
+                    }
+                    $('.model_prize .wrap')[0].style.transform = "scale("+num+")";
+                },3);
                 turnplate.bRotate = !turnplate.bRotate;
             }
         });
