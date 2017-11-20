@@ -49,15 +49,16 @@ $(document).ready(function(){
                     case '非常遗憾':imgSrc = 'hbsmile';break;
                     case '大礼包':imgSrc = 'hblh';break;
                 }
-                $('.model .body img').attr('src','./images/'+imgSrc+'.png');
-                $('.model .front .prize').html(txt);
-                $('.model .close').click(function(){
-                    $('.model').hide();
+                $('.model_prize .body img').attr('src','./images/'+imgSrc+'.png');
+                $('.model_prize .front .prize').html(txt);
+                $('.model_prize .close').click(function(){
+                    $('.model_prize').hide();
                 });
-                $('.model').fadeIn();
+                $('.model_prize').fadeIn();
                 turnplate.bRotate = !turnplate.bRotate;
             }
         });
+
     };
 
     $('.pointer').click(function (){
@@ -65,6 +66,7 @@ $(document).ready(function(){
         turnplate.bRotate = !turnplate.bRotate;
         //获取随机数(奖品个数范围内)
         var item = rnd(1,turnplate.restaraunts.length);
+        item = 6;
         //奖品数量等于10,指针落在对应奖品区域的中心角度[252, 216, 180, 144, 108, 72, 36, 360, 324, 288]
         rotateFn(item, turnplate.restaraunts[item-1]);
         /* switch (item) {
@@ -101,6 +103,19 @@ $(document).ready(function(){
          } */
         console.log(item);
     });
+    /*
+     * 规则
+     * */
+    $('.rule_btn').click(function () {
+        $('.model_rule').show();
+    });
+    $('.probability .nav').click(function () {
+        console.log(111);
+        $('.probability .text').slideToggle();
+    });
+    $('.model_rule .close').click(function () {
+        $('.model_rule').hide();
+    })
 });
 
 function rnd(n, m){
@@ -175,41 +190,45 @@ function drawRouletteWheel() {
             /*["八八八", "八十八", "六百", "八十整", "非常遗憾", "大礼包"];*/
             if(text.indexOf("发发发")>=0){
                 var img= document.getElementById("img-888");
-                img.onload=function(){
+               /* img.onload=function(){
                     ctx.drawImage(img,-55,-40,110,110);
                  };
-                ctx.drawImage(img,-55,-40,110,110);
+                ctx.drawImage(img,-55,-40,110,110);*/
             }else if(text.indexOf("八十八")>=0){
                 var img= document.getElementById("img-88");
-                img.onload=function(){
+               /* img.onload=function(){
                  ctx.drawImage(img,-55,-40,110,110);
                  };
-                ctx.drawImage(img,-55,-40,110,110);
+                ctx.drawImage(img,-55,-40,110,110);*/
             }else if(text.indexOf("六百")>=0){
                 var img= document.getElementById("img-600");
-                img.onload=function(){
+               /* img.onload=function(){
                     ctx.drawImage(img,-55,-40,110,110);
                 };
-                ctx.drawImage(img,-55,-40,110,110);
+                ctx.drawImage(img,-55,-40,110,110);*/
             }else if(text.indexOf("八十整")>=0){
                 var img= document.getElementById("img-80");
-                img.onload=function(){
+               /* img.onload=function(){
                  ctx.drawImage(img,-55,-40,110,110);
                  };
-                ctx.drawImage(img,-55,-40,110,110);
+                ctx.drawImage(img,-55,-40,110,110);*/
             }else if(text.indexOf("非常遗憾")>=0){
                 var img= document.getElementById("img-smile");
-                img.onload=function(){
+               /* img.onload=function(){
                     ctx.drawImage(img,-55,-40,110,110);
                  };
-                ctx.drawImage(img,-55,-40,110,110);
+                ctx.drawImage(img,-55,-40,110,110);*/
             }else if(text.indexOf("大礼包")>=0){
                 var img= document.getElementById("img-lh");
-                img.onload=function(){
-                 ctx.drawImage(img,-45,-40,100,100);
+               /* img.onload=function(){
+                    ctx.drawImage(img,-55,-40,110,110);
                  };
-                ctx.drawImage(img,-45,-40,100,100);
+                ctx.drawImage(img,-55,-40,110,110);*/
             }
+            img.onload=function(){
+                ctx.drawImage(img,-55,-40,110,110);
+            };
+            ctx.drawImage(img,-55,-40,110,110);
             //把当前画布返回（调整）到上一个save()状态之前
             ctx.restore();
             //----绘制奖品结束----
