@@ -272,12 +272,12 @@ Wilq32.PhotoEffect.prototype={
 			this._canvas.height = this._height+this._heightAdd;
 						
 			// REMEMBER: all drawings are read from backwards.. so first function is translate, then rotate, then translate, translate..
-			this._cnv.translate(this._widthAddHalf,this._heightAddHalf);	// at least center image on screen
-			this._cnv.translate(this._widthHalf,this._heightHalf);			// we move image back to its orginal 
-			this._cnv.rotate(angle);										// rotate image
-			this._cnv.translate(-this._widthHalf,-this._heightHalf);		// move image to its center, so we can rotate around its center
+			this._cnv.translate(this._widthAddHalf,this._heightAddHalf);	// at least center images on screen
+			this._cnv.translate(this._widthHalf,this._heightHalf);			// we move images back to its orginal 
+			this._cnv.rotate(angle);										// rotate images
+			this._cnv.translate(-this._widthHalf,-this._heightHalf);		// move images to its center, so we can rotate around its center
 			this._cnv.scale(this._aspectW,this._aspectH); // SCALE - if needed ;)
-			this._cnv.drawImage(this._img, 0, 0);							// First - we draw image
+			this._cnv.drawImage(this._img, 0, 0);							// First - we draw images
 		}
 
 	})()
