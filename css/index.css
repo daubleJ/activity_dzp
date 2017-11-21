@@ -44,7 +44,7 @@ a:hover{color:#c00; text-decoration:none;}
 .model_prize .light{
     display: none;
     position: absolute;
-    top:0;
+    top:-1.7rem;
     left: 0;
     width: 7.5rem;
     height: 7.5rem;
